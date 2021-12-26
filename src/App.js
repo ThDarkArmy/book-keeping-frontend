@@ -1,9 +1,8 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Header from './components/Header'
-import Login from './components/Login'
-import Register from './components/Register'
 import Home from './pages/Home'
 import LoginRegister from './pages/LoginRegister'
+import Customer from './pages/Customer'
+import About from './pages/About'
 
 
 const App = ()=> {
@@ -12,7 +11,8 @@ const App = ()=> {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/login-register" element={<LoginRegister/>}/>
-        <Route path="/register" element={<Register/>}/>
+        <Route path="/customer/:custId" element={<Customer/>}/>
+        <Route path="/about" element={<About/>}/>
         <Route path="*" />
       </Routes>
     </Router>
